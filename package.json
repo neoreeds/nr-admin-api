@@ -13,8 +13,10 @@
     "cpx-w": "cpx \"./src/**/!(*.ts)\" dist --watch",
     "generate": "npm-run-all clean -p tsc cpx",
     "build": "npm-run-all clean -p tsc-w cpx-w",
-    "start": "nodemon dist/server.js --debug=5858",
-    "postinstall": "npm run build"
+    "dist": "npm-run-all clean -p tsc cpx",
+    "start": "node dist/server.js",
+    "debug": "nodemon dist/server.js --debug=5858",
+    "postinstall": "npm run dist"
   },
   "version": "1.0.0",
   "license": "MIT",
