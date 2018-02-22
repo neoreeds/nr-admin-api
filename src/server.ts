@@ -101,6 +101,7 @@ else {
  * and exchanges for a token that has permissions to graph.
  */
 app.get('/api/values', handler(async (req, res) => {
+    return res.json({ ok: 'ok' });
     /**
      * Only initializes the auth the first time
      * and uses the downloaded keys information subsequently.
